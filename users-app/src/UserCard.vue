@@ -10,7 +10,7 @@ const props = defineProps<{ userData: UserData }>()
     <p>{{ userData.position }}</p>
     <p>Gender: {{ userData.gender }}</p>
     <p v-if="userData.age > 18">Age: {{ userData.age }}</p>
-    <ul>
+    <ul v-if="userData.hobbies.length">
       <li v-for="(hobby, index) in userData.hobbies" :key="index">{{ hobby }}</li>
     </ul>
   </div>
